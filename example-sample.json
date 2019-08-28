@@ -1,22 +1,30 @@
-{"projects": [
-  {
-    "name": "OpenTrons",
-    "author": "OpenTrons",
-    "link": "https://opentrons.com/",
-    "tags": ["liquid handling", "robotics"]
-  },
-  {
-    "name": "DIY BioPrinter",
-    "author": "Patrik",
-    "link": "http://www.instructables.com/id/DIY-BioPrinter/",
-    "tags": ["3D Printer", "Biomaterials"]
-  },
-  {
-    "name": "Biropette",
-    "author": "Baden Lab",
-    "link": "https://www.thingiverse.com/thing:255519",
-    "tags": ["3D Printable", "Pipetting"]
+{"projects":{
+    "header": {
+        "name": "Project Name",
+        "link": "Link",
+        "tags": "Category"
+    },
+    "content": [
+      {
+        "name": "OpenTrons",
+        "author": "OpenTrons",
+        "link": "https://opentrons.com/",
+        "tags": ["Liquid handling", "Robotics"]
+      },
+      {
+        "name": "DIY BioPrinter",
+        "author": "Patrik",
+        "link": "http://www.instructables.com/id/DIY-BioPrinter/",
+        "tags": ["3D Printer", "Biomaterials"]
+      },
+      {
+        "name": "Biropette",
+        "author": "Baden Lab",
+        "link": "https://www.thingiverse.com/thing:255519",
+        "tags": ["3D Printable", "Pipetting"]
 
-  }
-]}
+      }
+    ]
+}
+}
 
