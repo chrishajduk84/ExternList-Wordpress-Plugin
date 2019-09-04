@@ -25,8 +25,29 @@
         "description": "DIY Pipette",
         "link": "https://www.thingiverse.com/thing:255519",
         "tags": ["3D Printable", "Liquid Handling"]
-
+      },
+      {
+        "name": "CellStruder",
+        "author": "Ricardo D Solorzano",
+        "description": "Syringe Extruder for cell printing",
+        "link": "https://www.thingiverse.com/thing:251647",
+        "tags": ["3D Printable", "Liquid Handling"]
+      },
+      {
+        "name": "Wind Direction Anemometer",
+        "author": "",
+        "description": "",
+        "link": "https://www.thingiverse.com/thing:245025",
+        "tags": ["3D Printable", "Weather Monitoring"]
+      },
+      {
+        "name": "Zeiss Slide Holder",
+        "author": "",
+        "description": "Slide holder for standard 75mmx25mm slides",
+        "link": "https://www.thingiverse.com/thing:243580",
+        "tags": ["3D Printable", "Microscopy"]
       }
+
     ]
 }
 }

@@ -61,7 +61,7 @@ function parse_file_func( $atts ) {
     $headerKeys = [];
     $rowCount = 0;
     $filterKeys = array();
-    $filter = "tags"; //TODO:TEMPORARY, let shortcode user define this
+    $filter = $atts['filter']; //User defines whether or not filtering will happen
     //TODO: ALSO INCLUDE A METHOD TO SORT ENTRIES (BY Popularity/Rank?, By Name?) 
     foreach ($json as $table){ 
         $pageContent .= "<table><tr>";
