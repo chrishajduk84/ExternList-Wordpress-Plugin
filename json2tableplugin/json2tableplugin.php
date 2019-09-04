@@ -1,8 +1,8 @@
 <?php
    /*
-   Plugin Name: Parse File Plugin
-   Plugin URI: https://github.com/chrishajduk84/ExternList-Wordpress-Plugin
-   description: >-A plugin to use external data (text/html/etc) sources
+   Plugin Name: JSON2Table Plugin
+   Plugin URI: https://github.com/chrishajduk84/JSON2Table-Wordpress-Plugin
+   description: >-A plugin to use external JSON sources to implement a HTML table (acts as a JSON database driver)
    Version: 1.0
    Author: Chris Hajduk
    Author URI: https://www.chrishajduk.com
