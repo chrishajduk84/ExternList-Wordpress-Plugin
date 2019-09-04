@@ -38,6 +38,24 @@ function arr2str($x){
     }
 }
 
+$sortingTag = "";
+function compare_rows($x,$y){
+    global $sortingTag;
+    if (is_string($x[$sortingTag]) && is_string($y[$sortingTag])){
+        return strcmp($x[$sortingTag],$y[$sortingTag]);
+    }else{
+        if ($x[$sortingTag] == $y[$sortingTag]){
+            return 0;
+        }
+        else if ($x[$sortingTag] > $y[$sortingTag]){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+}
+
 /* Add shortcode to include external content */
 function parse_file_func( $atts ) {
   /*extract( shortcode_atts( array(
@@ -47,22 +65,20 @@ function parse_file_func( $atts ) {
   if ($atts['file']){
     $file = $atts['file'];
     $fileContent = file_get_contents($file);
-    //TODO: Check if fileContent is false, indicating failure to copy into memory
+    if ($fileContent == false){ return "Error loading data";} //Check if fileContent is false, indicating failure to copy into memory
 
     //Decode JSON (parse), else display raw [HTML (display raw) or TEXT (display raw)]
     $json = json_decode($fileContent,true);
-    //var_dump($json);
     
     //HTML + JAVASCRIPT FORMATTING
-    //TODO: Add filtering by tag capibility (use "$atts['filter']" to determine category)
-    
 
     $pageContent = "";
     $headerKeys = [];
     $rowCount = 0;
     $filterKeys = array();
     $filter = $atts['filter']; //User defines whether or not filtering will happen
-    //TODO: ALSO INCLUDE A METHOD TO SORT ENTRIES (BY Popularity/Rank?, By Name?) 
+    global $sortingTag;
+    $sortingTag = $atts['sort']; //User defines what category will determine how entries are sorted (A is the top, 1 is the top)
     foreach ($json as $table){ 
         $pageContent .= "<table><tr>";
         foreach ($table['header'] as $key=>$col){
@@ -70,6 +86,10 @@ function parse_file_func( $atts ) {
             array_push($headerKeys,$key);
         }
         $pageContent .= "</tr>";
+        //Implement Sorting of data
+        if ($sortingTag != ""){
+            usort($table['content'],'compare_rows');
+        }
         foreach ($table['content'] as $row){
             $rowCount++;
             $pageContent .= "<tr>";
@@ -98,7 +118,6 @@ function parse_file_func( $atts ) {
                     $rowContent .= "<td><a href='" . $elementText . "'>" . $elementText . "</a></td>"; 
                 }else{
                     $rowContent .= "<td>" . $elementText . "</td>";     
-                    //var_dump($element);
                 }
 
             }
