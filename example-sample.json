@@ -8,20 +8,23 @@
       {
         "name": "OpenTrons",
         "author": "OpenTrons",
+        "description":"Pipetting Robot",
         "link": "https://opentrons.com/",
-        "tags": ["Liquid handling", "Robotics"]
+        "tags": ["Liquid Handling", "Robotics"]
       },
       {
         "name": "DIY BioPrinter",
         "author": "Patrik",
+        "description": "3D printer capable of extruding biomaterials",
         "link": "http://www.instructables.com/id/DIY-BioPrinter/",
         "tags": ["3D Printer", "Biomaterials"]
       },
       {
         "name": "Biropette",
         "author": "Baden Lab",
+        "description": "DIY Pipette",
         "link": "https://www.thingiverse.com/thing:255519",
-        "tags": ["3D Printable", "Pipetting"]
+        "tags": ["3D Printable", "Liquid Handling"]
 
       }
     ]

@@ -1,0 +1,12 @@
+.btnFilter{
+    background-color: hsl(271,82%,29%);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
