@@ -24,3 +24,7 @@ In order to use the plugin simply type in the shortcode:
 
 The example-sample.json works with the above shortcode.
 The "header" specifies what columns will be displayed (in what order), whereas the "content" specifies the actual data. Links are autodetected.
+
+## Example
+This is an screenshot from the wordpress page at [http://openscience.hardware](http://openscience.hardware).
+![Screenshot](https://user-images.githubusercontent.com/3022103/64719631-a6cac400-d496-11e9-9c07-3d4ea9b44e9a.PNG)
