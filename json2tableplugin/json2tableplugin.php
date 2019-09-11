@@ -152,7 +152,9 @@ function parse_file_func( $atts ) {
         </script>";
         if ($filter != ""){
             wp_enqueue_style( 'button-style' );
-            $filterContent .= "<div><button type='button' class='btnFilter' onclick=filter('filter_all')>All (".$rowCount.")</button>";
+            $filterContent .= "<div class='filterdiv'><button type='button' class='btnFilter' onclick=filter('filter_all')>All (".$rowCount.")</button>";
+            //Sort by count
+            arsort($filterKeys);
             foreach ($filterKeys as $tag=>$count){
                 $filterContent .= "<button type='button' class='btnFilter' onclick=filter('filter_".preg_replace('/\s+/', '', $tag)."')>" . $tag . " (".$count.")</button>";
             }
